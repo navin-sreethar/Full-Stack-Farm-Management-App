@@ -1,0 +1,64 @@
+# =============================================================
+# FarmManager — .gitignore
+# Portfolio upload: only selected files are included.
+# Full source is proprietary.
+# =============================================================
+
+# -------------------------------------------------------
+# BLOCK EVERYTHING BY DEFAULT
+# -------------------------------------------------------
+*
+
+# -------------------------------------------------------
+# THEN EXPLICITLY ALLOW the files we want to upload
+# -------------------------------------------------------
+
+# Root docs and config
+!README.md
+!GITHUB_SETUP.md
+!.gitignore
+!.htaccess
+
+# Config example templates (safe — no real credentials)
+!config/
+config/*
+!config/database.example.php
+!config/mail.example.php
+!config/secrets.example.php
+
+# Selected core framework files
+!core/
+core/*
+!core/Router.php
+!core/Auth.php
+!core/Model.php
+!core/CSRF.php
+
+# Selected controller
+!controllers/
+controllers/*
+!controllers/AuthController.php
+
+# Database schema
+!database/
+database/*
+!database/schema.sql
+!database/seed.sql
+
+# API entry point
+!api/
+api/*
+!api/index.php
+
+# Docker setup
+!docker/
+docker/*
+!docker/docker-compose.yml
+!docker/Dockerfile
+
+# Screenshots folder (you'll add these)
+!screenshots/
+!screenshots/*.png
+!screenshots/*.jpg
+!screenshots/*.jpeg
+!screenshots/*.webp

@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /farm_app/
+
+# Let real files and directories pass through
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route everything else through the front controller
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Block public access to setup and migration scripts
+<FilesMatch "^(setup|migrate_product_images)\.php$">
+    Require all denied
+</FilesMatch>
