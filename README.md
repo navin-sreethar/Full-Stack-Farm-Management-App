@@ -131,11 +131,6 @@ cd docker && docker-compose up -d
 # App available at http://localhost:8080
 ```
 
-**Demo login:**
-- Admin: `admin@farmapp.com` / `admin123`
-- Farmer: `john@farm.com` / `farmer123`
-
----
 
 ## Built By
 
